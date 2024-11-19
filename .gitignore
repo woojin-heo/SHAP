@@ -9,7 +9,7 @@ __pycache__/
 logs/
 *.log
 
-# 환경 파일
+# env file
 .env
 
 # macOS
