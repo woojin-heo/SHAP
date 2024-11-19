@@ -1,0 +1,16 @@
+# Node.js
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+logs/
+*.log
+
+# 환경 파일
+.env
+
+# macOS
+.DS_Store
