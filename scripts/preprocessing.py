@@ -24,6 +24,7 @@ def preprocessing(file_path='/Users/woojinheo/Desktop/github/SHAP/data/train.csv
     # Encode categorical features
     categorical_columns = ['Gender', 'Customer Type', 'Type of Travel', 'Class']
     X = pd.get_dummies(X, columns=categorical_columns, drop_first=True)
+    cols = X.columns.tolist()
 
     # Handle missing values using imputation
     imputer = SimpleImputer(strategy="median")
@@ -37,4 +38,4 @@ def preprocessing(file_path='/Users/woojinheo/Desktop/github/SHAP/data/train.csv
     else:
         X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size=test_size, random_state=42, stratify=y)
     
-    return df, X_train, X_valid, y_train, y_valid
+    return df, cols, X_train, X_valid, y_train, y_valid
